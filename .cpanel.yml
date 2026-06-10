@@ -2,8 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/lihelyci/appone
-    - /bin/rsync -avz --exclude '.git' --exclude 'node_modules' --exclude 'tests' --exclude '.env' * $DEPLOYPATH
-    - cd $DEPLOYPATH
+    - mkdir -p $DEPLOYPATH
+    - rsync -avz --exclude '.git' --exclude 'node_modules' --exclude 'tests' --exclude '.env' ./ $DEPLOYPATH
     # Uncomment the lines below if composer and php are available on your cPanel shell path
     # and you want to automate dependencies & optimizations:
     # - composer install --no-dev --optimize-autoloader --no-interaction
