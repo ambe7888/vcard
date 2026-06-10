@@ -139,7 +139,7 @@ if (! function_exists('updateSetting')) {
 if (! function_exists('isLandingPageEnabled')) {
     function isLandingPageEnabled()
     {
-        return getSetting('landingPageEnabled', true) === true || getSetting('landingPageEnabled', true) === '1';
+        return false;
     }
 }
 
